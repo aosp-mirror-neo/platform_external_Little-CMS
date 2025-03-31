@@ -1,0 +1,60 @@
+// Copyright 2025 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+cc_library_shared {
+    name: "liblcms2",
+
+    sdk_version: "current",
+    visibility: [
+        "//vendor:__subpackages__",
+        "//external/libcupsfilters",
+    ],
+
+    local_include_dirs: [
+        "include",
+    ],
+
+    srcs: [
+        "src/cmscnvrt.c",
+        "src/cmserr.c",
+        "src/cmsgamma.c",
+        "src/cmsgmt.c",
+        "src/cmsintrp.c",
+        "src/cmsio0.c",
+        "src/cmsio1.c",
+        "src/cmslut.c",
+        "src/cmsplugin.c",
+        "src/cmssm.c",
+        "src/cmsmd5.c",
+        "src/cmsmtrx.c",
+        "src/cmspack.c",
+        "src/cmspcs.c",
+        "src/cmswtpnt.c",
+        "src/cmsxform.c",
+        "src/cmssamp.c",
+        "src/cmsnamed.c",
+        "src/cmscam02.c",
+        "src/cmsvirt.c",
+        "src/cmstypes.c",
+        "src/cmscgats.c",
+        "src/cmsps2.c",
+        "src/cmsopt.c",
+        "src/cmshalf.c",
+        "src/cmsalpha.c",
+    ],
+
+    export_include_dirs: [
+        "include",
+    ],
+}
